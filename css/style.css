@@ -854,6 +854,7 @@ img {
     font-size: 1.1rem;
 }
 
+.loc-content h3,
 .loc-content h4 {
     font-family: var(--font-heading);
     font-size: 1.05rem;
@@ -948,6 +949,7 @@ img {
     padding: 24px;
 }
 
+.attr-content h3,
 .attr-content h4 {
     font-family: var(--font-heading);
     font-size: 1.1rem;
