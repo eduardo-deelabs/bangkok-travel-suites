@@ -140,44 +140,39 @@
     // ========================================
     // ABOUT SECTION ANIMATIONS
     // ========================================
-    gsap.fromTo('.about-content', 
-        { opacity: 0, x: -60 },
-        { 
-            opacity: 1, x: 0, duration: 1, ease: 'power3.out',
-            scrollTrigger: {
-                trigger: '.about',
-                start: 'top 80%',
-                toggleActions: 'play none none none',
-                immediateRender: false
-            }
+    gsap.from('.about-content', {
+        x: -60,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: '.about',
+            start: 'top 80%',
+            toggleActions: 'play none none none'
         }
-    );
+    });
 
-    gsap.fromTo('.about-visual',
-        { opacity: 0, x: 60 },
-        { 
-            opacity: 1, x: 0, duration: 1, ease: 'power3.out',
-            scrollTrigger: {
-                trigger: '.about',
-                start: 'top 80%',
-                toggleActions: 'play none none none',
-                immediateRender: false
-            }
+    gsap.from('.about-visual', {
+        x: 60,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: '.about',
+            start: 'top 80%',
+            toggleActions: 'play none none none'
         }
-    );
+    });
 
-    gsap.fromTo('.about-stats .stat-item',
-        { opacity: 0, y: 30 },
-        { 
-            opacity: 1, y: 0, duration: 0.6, stagger: 0.15, ease: 'power3.out',
-            scrollTrigger: {
-                trigger: '.about-stats',
-                start: 'top 90%',
-                toggleActions: 'play none none none',
-                immediateRender: false
-            }
+    gsap.from('.about-stats .stat-item', {
+        y: 30,
+        duration: 0.6,
+        stagger: 0.15,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: '.about-stats',
+            start: 'top 90%',
+            toggleActions: 'play none none none'
         }
-    );
+    });
 
     // ========================================
     // SECTION HEADER ANIMATIONS (reusable)
@@ -185,35 +180,33 @@
     const sectionHeaders = document.querySelectorAll('.section-header');
     
     sectionHeaders.forEach(header => {
-        gsap.fromTo(header.children,
-            { opacity: 0, y: 40 },
-            { 
-                opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out',
-                scrollTrigger: {
-                    trigger: header,
-                    start: 'top 85%',
-                    toggleActions: 'play none none none',
-                immediateRender: false
-                }
+        gsap.from(header.children, {
+            y: 40,
+            duration: 0.8,
+            stagger: 0.15,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: header,
+                start: 'top 85%',
+                toggleActions: 'play none none none'
             }
-        );
+        });
     });
 
     // ========================================
     // ROOM CARDS STAGGER ANIMATION
     // ========================================
-    gsap.fromTo('.room-card',
-        { opacity: 0, y: 80 },
-        { 
-            opacity: 1, y: 0, duration: 0.8, stagger: 0.2, ease: 'power3.out',
-            scrollTrigger: {
-                trigger: '.rooms-grid',
-                start: 'top 80%',
-                toggleActions: 'play none none none',
-                immediateRender: false
-            }
+    gsap.from('.room-card', {
+        y: 80,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: '.rooms-grid',
+            start: 'top 80%',
+            toggleActions: 'play none none none'
         }
-    );
+    });
 
     // Room card hover image zoom
     document.querySelectorAll('.room-card').forEach(card => {
@@ -231,157 +224,146 @@
     // ========================================
     // SERVICES STAGGER ANIMATION
     // ========================================
-    gsap.fromTo('.service-card',
-        { opacity: 0, y: 60, scale: 0.9 },
-        { 
-            opacity: 1, y: 0, scale: 1, duration: 0.6, stagger: 0.1, ease: 'back.out(1.7)',
-            scrollTrigger: {
-                trigger: '.services-grid',
-                start: 'top 80%',
-                toggleActions: 'play none none none',
-                immediateRender: false
-            }
+    gsap.from('.service-card', {
+        y: 60,
+        scale: 0.9,
+        duration: 0.6,
+        stagger: 0.1,
+        ease: 'back.out(1.7)',
+        scrollTrigger: {
+            trigger: '.services-grid',
+            start: 'top 80%',
+            toggleActions: 'play none none none'
         }
-    );
+    });
 
-    gsap.fromTo('.service-icon',
-        { scale: 0 },
-        { 
-            scale: 1, duration: 0.5, stagger: 0.1, ease: 'elastic.out(1, 0.5)',
-            scrollTrigger: {
-                trigger: '.services-grid',
-                start: 'top 75%',
-                toggleActions: 'play none none none',
-                immediateRender: false
-            }
+    gsap.from('.service-icon', {
+        scale: 0,
+        duration: 0.5,
+        stagger: 0.1,
+        ease: 'elastic.out(1, 0.5)',
+        scrollTrigger: {
+            trigger: '.services-grid',
+            start: 'top 75%',
+            toggleActions: 'play none none none'
         }
-    );
+    });
 
     // ========================================
     // LOCATION CARDS ANIMATION
     // ========================================
-    gsap.fromTo('.location-card',
-        { opacity: 0, x: -40 },
-        { 
-            opacity: 1, x: 0, duration: 0.6, stagger: 0.15, ease: 'power3.out',
-            scrollTrigger: {
-                trigger: '.location-info',
-                start: 'top 80%',
-                toggleActions: 'play none none none',
-                immediateRender: false
-            }
+    gsap.from('.location-card', {
+        x: -40,
+        duration: 0.6,
+        stagger: 0.15,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: '.location-info',
+            start: 'top 80%',
+            toggleActions: 'play none none none'
         }
-    );
+    });
 
-    gsap.fromTo('.nearby-tags .tag',
-        { opacity: 0, scale: 0.8 },
-        { 
-            opacity: 1, scale: 1, duration: 0.4, stagger: 0.08, ease: 'back.out(1.7)',
-            scrollTrigger: {
-                trigger: '.nearby-tags',
-                start: 'top 90%',
-                toggleActions: 'play none none none',
-                immediateRender: false
-            }
+    gsap.from('.nearby-tags .tag', {
+        scale: 0.8,
+        duration: 0.4,
+        stagger: 0.08,
+        ease: 'back.out(1.7)',
+        scrollTrigger: {
+            trigger: '.nearby-tags',
+            start: 'top 90%',
+            toggleActions: 'play none none none'
         }
-    );
+    });
 
-    gsap.fromTo('.location-map',
-        { opacity: 0, x: 60 },
-        { 
-            opacity: 1, x: 0, duration: 1, ease: 'power3.out',
-            scrollTrigger: {
-                trigger: '.location-grid',
-                start: 'top 80%',
-                toggleActions: 'play none none none',
-                immediateRender: false
-            }
+    gsap.from('.location-map', {
+        x: 60,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: '.location-grid',
+            start: 'top 80%',
+            toggleActions: 'play none none none'
         }
-    );
+    });
 
     // ========================================
     // ATTRACTIONS ANIMATION
     // ========================================
-    gsap.fromTo('.attraction-card',
-        { opacity: 0, y: 80, rotateY: 10 },
-        { 
-            opacity: 1, y: 0, rotateY: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out',
-            scrollTrigger: {
-                trigger: '.attractions-grid',
-                start: 'top 80%',
-                toggleActions: 'play none none none',
-                immediateRender: false
-            }
+    gsap.from('.attraction-card', {
+        y: 80,
+        rotateY: 10,
+        duration: 0.8,
+        stagger: 0.15,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: '.attractions-grid',
+            start: 'top 80%',
+            toggleActions: 'play none none none'
         }
-    );
+    });
 
     // ========================================
     // CONTACT SECTION ANIMATION
     // ========================================
-    gsap.fromTo('.contact-info',
-        { opacity: 0, x: -60 },
-        { 
-            opacity: 1, x: 0, duration: 1, ease: 'power3.out',
-            scrollTrigger: {
-                trigger: '.contact-grid',
-                start: 'top 80%',
-                toggleActions: 'play none none none',
-                immediateRender: false
-            }
+    gsap.from('.contact-info', {
+        x: -60,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: '.contact-grid',
+            start: 'top 80%',
+            toggleActions: 'play none none none'
         }
-    );
+    });
 
-    gsap.fromTo('.contact-method',
-        { opacity: 0, x: -30 },
-        { 
-            opacity: 1, x: 0, duration: 0.6, stagger: 0.12, ease: 'power3.out',
-            scrollTrigger: {
-                trigger: '.contact-methods',
-                start: 'top 85%',
-                toggleActions: 'play none none none',
-                immediateRender: false
-            }
+    gsap.from('.contact-method', {
+        x: -30,
+        duration: 0.6,
+        stagger: 0.12,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: '.contact-methods',
+            start: 'top 85%',
+            toggleActions: 'play none none none'
         }
-    );
+    });
 
-    gsap.fromTo('.contact-form-wrapper',
-        { opacity: 0, x: 60 },
-        { 
-            opacity: 1, x: 0, duration: 1, ease: 'power3.out',
-            scrollTrigger: {
-                trigger: '.contact-grid',
-                start: 'top 80%',
-                toggleActions: 'play none none none',
-                immediateRender: false
-            }
+    gsap.from('.contact-form-wrapper', {
+        x: 60,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: '.contact-grid',
+            start: 'top 80%',
+            toggleActions: 'play none none none'
         }
-    );
+    });
 
     // ========================================
     // FOOTER ANIMATION
     // ========================================
-    gsap.fromTo('.footer-grid > div',
-        { opacity: 0, y: 40 },
-        { 
-            opacity: 1, y: 0, duration: 0.6, stagger: 0.15, ease: 'power3.out',
-            scrollTrigger: {
-                trigger: '.footer',
-                start: 'top 90%',
-                toggleActions: 'play none none none',
-                immediateRender: false
-            }
+    gsap.from('.footer-grid > div', {
+        y: 40,
+        duration: 0.6,
+        stagger: 0.15,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: '.footer',
+            start: 'top 90%',
+            toggleActions: 'play none none none'
         }
-    );
+    });
 
     // ========================================
     // FLOATING CTA ANIMATION
     // ========================================
-    gsap.fromTo('.floating-cta',
-        { opacity: 0, x: 50 },
-        { 
-            opacity: 1, x: 0, duration: 0.8, delay: 2, ease: 'back.out(1.7)'
-        }
-    );
+    gsap.from('.floating-cta', {
+        x: 50,
+        duration: 0.8,
+        delay: 2,
+        ease: 'back.out(1.7)'
+    });
 
     gsap.to('.floating-cta', {
         scale: 1.05,

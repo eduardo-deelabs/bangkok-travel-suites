@@ -1665,3 +1665,24 @@ html {
     background: var(--color-gold);
     color: var(--color-navy);
 }
+
+/* ========================================
+   FIX: Force content visibility
+   ======================================== */
+
+/* All animated elements start visible */
+.about-content,
+.about-visual,
+.room-card,
+.service-card,
+.location-card,
+.attraction-card,
+.contact-info,
+.contact-form-wrapper,
+.footer-grid > div,
+.section-header,
+.about-stats .stat-item,
+.nearby-tags .tag,
+.contact-method {
+    opacity: 1 !important;
+}
