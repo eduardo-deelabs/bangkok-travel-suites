@@ -501,6 +501,13 @@
     }
 
     // ========================================
+    // FORCE OPACITY 1 ON ALL ANIMATED ELEMENTS
+    // ========================================
+    document.querySelectorAll('.about-content, .about-visual, .room-card, .service-card, .location-card, .attraction-card, .contact-info, .contact-form-wrapper, .footer-grid > div, .section-header, .about-stats .stat-item, .nearby-tags .tag, .contact-method').forEach(el => {
+        el.style.setProperty('opacity', '1', 'important');
+    });
+
+    // ========================================
     // INITIALIZE
     // ========================================
     handleScroll();
