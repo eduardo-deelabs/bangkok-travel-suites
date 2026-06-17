@@ -147,7 +147,8 @@
             scrollTrigger: {
                 trigger: '.about',
                 start: 'top 80%',
-                toggleActions: 'play none none none'
+                toggleActions: 'play none none none',
+                immediateRender: false
             }
         }
     );
@@ -159,7 +160,8 @@
             scrollTrigger: {
                 trigger: '.about',
                 start: 'top 80%',
-                toggleActions: 'play none none none'
+                toggleActions: 'play none none none',
+                immediateRender: false
             }
         }
     );
@@ -171,7 +173,8 @@
             scrollTrigger: {
                 trigger: '.about-stats',
                 start: 'top 90%',
-                toggleActions: 'play none none none'
+                toggleActions: 'play none none none',
+                immediateRender: false
             }
         }
     );
@@ -189,7 +192,8 @@
                 scrollTrigger: {
                     trigger: header,
                     start: 'top 85%',
-                    toggleActions: 'play none none none'
+                    toggleActions: 'play none none none',
+                immediateRender: false
                 }
             }
         );
@@ -205,7 +209,8 @@
             scrollTrigger: {
                 trigger: '.rooms-grid',
                 start: 'top 80%',
-                toggleActions: 'play none none none'
+                toggleActions: 'play none none none',
+                immediateRender: false
             }
         }
     );
@@ -233,7 +238,8 @@
             scrollTrigger: {
                 trigger: '.services-grid',
                 start: 'top 80%',
-                toggleActions: 'play none none none'
+                toggleActions: 'play none none none',
+                immediateRender: false
             }
         }
     );
@@ -245,7 +251,8 @@
             scrollTrigger: {
                 trigger: '.services-grid',
                 start: 'top 75%',
-                toggleActions: 'play none none none'
+                toggleActions: 'play none none none',
+                immediateRender: false
             }
         }
     );
@@ -260,7 +267,8 @@
             scrollTrigger: {
                 trigger: '.location-info',
                 start: 'top 80%',
-                toggleActions: 'play none none none'
+                toggleActions: 'play none none none',
+                immediateRender: false
             }
         }
     );
@@ -272,7 +280,8 @@
             scrollTrigger: {
                 trigger: '.nearby-tags',
                 start: 'top 90%',
-                toggleActions: 'play none none none'
+                toggleActions: 'play none none none',
+                immediateRender: false
             }
         }
     );
@@ -284,7 +293,8 @@
             scrollTrigger: {
                 trigger: '.location-grid',
                 start: 'top 80%',
-                toggleActions: 'play none none none'
+                toggleActions: 'play none none none',
+                immediateRender: false
             }
         }
     );
@@ -299,7 +309,8 @@
             scrollTrigger: {
                 trigger: '.attractions-grid',
                 start: 'top 80%',
-                toggleActions: 'play none none none'
+                toggleActions: 'play none none none',
+                immediateRender: false
             }
         }
     );
@@ -314,7 +325,8 @@
             scrollTrigger: {
                 trigger: '.contact-grid',
                 start: 'top 80%',
-                toggleActions: 'play none none none'
+                toggleActions: 'play none none none',
+                immediateRender: false
             }
         }
     );
@@ -326,7 +338,8 @@
             scrollTrigger: {
                 trigger: '.contact-methods',
                 start: 'top 85%',
-                toggleActions: 'play none none none'
+                toggleActions: 'play none none none',
+                immediateRender: false
             }
         }
     );
@@ -338,7 +351,8 @@
             scrollTrigger: {
                 trigger: '.contact-grid',
                 start: 'top 80%',
-                toggleActions: 'play none none none'
+                toggleActions: 'play none none none',
+                immediateRender: false
             }
         }
     );
@@ -353,7 +367,8 @@
             scrollTrigger: {
                 trigger: '.footer',
                 start: 'top 90%',
-                toggleActions: 'play none none none'
+                toggleActions: 'play none none none',
+                immediateRender: false
             }
         }
     );
