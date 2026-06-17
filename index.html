@@ -1,582 +1,537 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Bangkok Travel Suites Hotel - Your Home in Bangkok. Boutique hotel in Nonthaburi with 40 rooms, free WiFi, breakfast, and shuttle service. 20 minutes from Don Mueang Airport.">
-  <title>Bangkok Travel Suites Hotel | Your Home in Bangkok</title>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Sarabun:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangkok Travel Suites Hotel | Your Home in Bangkok</title>
+    <meta name="description" content="Bangkok Travel Suites Hotel - 40 modern rooms with Thai hospitality. Free WiFi, breakfast, fitness center. 20 min from Don Mueang Airport.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon"><i class="fas fa-hotel"></i></span>
+                <span class="logo-text">Bangkok Travel Suites</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#rooms" class="nav-link">Rooms</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#location" class="nav-link">Location</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="tel:029659661" class="nav-link nav-cta"><i class="fas fa-phone"></i> Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <!-- ===== HEADER ===== -->
-  <header class="header" id="header">
-    <div class="container header-inner">
-      <a href="#" class="logo" aria-label="Bangkok Travel Suites Hotel Home">
-        BTS Hotel
-        <span>Bangkok Travel Suites</span>
-      </a>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1920&q=80" alt="Luxury hotel lobby" class="hero-img">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-star"></i> Boutique Hotel in Nonthaburi
+            </div>
+            <h1 class="hero-title">Your Home<br>in Bangkok</h1>
+            <p class="hero-subtitle">
+                Experience warm Thai hospitality in our 40 contemporary rooms.<br>
+                Where comfort meets convenience on Ngamwongwan Road.
+            </p>
+            <div class="hero-cta">
+                <a href="#rooms" class="btn btn-primary">Explore Rooms</a>
+                <a href="tel:029659661" class="btn btn-outline"><i class="fas fa-phone"></i> 02-965-9661</a>
+            </div>
+            <div class="hero-trust">
+                <div class="trust-item">
+                    <span class="trust-number">40</span>
+                    <span class="trust-label">Rooms</span>
+                </div>
+                <div class="trust-divider"></div>
+                <div class="trust-item">
+                    <i class="fas fa-wifi trust-icon"></i>
+                    <span class="trust-label">Free WiFi</span>
+                </div>
+                <div class="trust-divider"></div>
+                <div class="trust-item">
+                    <i class="fas fa-coffee trust-icon"></i>
+                    <span class="trust-label">Breakfast</span>
+                </div>
+                <div class="trust-divider"></div>
+                <div class="trust-item">
+                    <i class="fas fa-plane trust-icon"></i>
+                    <span class="trust-label">20 min to Airport</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <a href="#about" class="scroll-indicator">
+                <span>Scroll</span>
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
 
-      <!-- Desktop Nav -->
-      <nav class="nav-desktop" aria-label="Main Navigation">
-        <a href="#about">About <span class="thai-text">เกี่ยวกับเรา</span></a>
-        <a href="#rooms">Rooms <span class="thai-text">ห้องพัก</span></a>
-        <a href="#services">Services <span class="thai-text">บริการ</span></a>
-        <a href="#location">Location <span class="thai-text">ที่ตั้ง</span></a>
-        <a href="#attractions">Attractions <span class="thai-text">สถานที่ท่องเที่ยว</span></a>
-        <a href="#contact">Contact <span class="thai-text">ติดต่อ</span></a>
-      </nav>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <span class="section-label">About Us</span>
+                    <h2 class="section-title">A Warm Welcome<br>Awaits You</h2>
+                    <p class="about-text">
+                        Bangkok Travel Suites Hotel adds warmth to urban living with the care and 
+                        Thai hospitality of our staff. Our 40 spacious rooms are decorated in a 
+                        contemporary style, offering the most flexible and comfortable accommodation 
+                        in Nonthaburi.
+                    </p>
+                    <p class="about-text">
+                        Located just 20 minutes from Don Mueang International Airport and conveniently 
+                        situated on Ngamwongwan Road near the expressway, we provide easy access to 
+                        hospitals, tourist attractions, and government centers.
+                    </p>
+                    <div class="about-quote">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p>"BANGKOK TRAVEL SUITES — Have a nice day"</p>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="about-image-main">
+                        <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&q=80" alt="Hotel exterior" class="about-img">
+                    </div>
+                    <div class="about-image-accent"></div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">40+</span>
+                            <span class="stat-desc">Modern Rooms</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">24/7</span>
+                            <span class="stat-desc">Service</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <!-- Hamburger -->
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </header>
+    <!-- Rooms Section -->
+    <section class="rooms" id="rooms">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Accommodations</span>
+                <h2 class="section-title">Our Rooms</h2>
+                <p class="section-desc">Choose from three comfortable room types designed for your perfect stay</p>
+            </div>
+            <div class="rooms-grid">
+                <div class="room-card" data-room="double">
+                    <div class="room-image">
+                        <img src="https://images.unsplash.com/photo-1631049307264-da0ec1d07b61?w=600&q=80" alt="Standard Double Room" class="room-img">
+                        <div class="room-badge">Popular</div>
+                    </div>
+                    <div class="room-content">
+                        <h3 class="room-name">Standard Double</h3>
+                        <p class="room-name-th">ห้องเตียงเดี่ยว</p>
+                        <p class="room-desc">Comfortable room with a plush double bed, perfect for solo travelers or couples seeking a cozy retreat.</p>
+                        <ul class="room-features">
+                            <li><i class="fas fa-bed"></i> 1 Double Bed</li>
+                            <li><i class="fas fa-wifi"></i> Free WiFi</li>
+                            <li><i class="fas fa-snowflake"></i> Air Conditioning</li>
+                            <li><i class="fas fa-tv"></i> Flat TV</li>
+                        </ul>
+                        <div class="room-footer">
+                            <div class="room-price">
+                                <span class="price-from">From</span>
+                                <span class="price-value">฿1,200</span>
+                                <span class="price-unit">/night</span>
+                            </div>
+                            <a href="tel:029659661" class="btn btn-small">Book Now</a>
+                        </div>
+                    </div>
+                </div>
 
-  <!-- Mobile Nav -->
-  <nav class="nav-mobile" id="mobile-nav" aria-label="Mobile Navigation">
-    <a href="#about" class="mobile-link">About <span class="thai-text">เกี่ยวกับเรา</span></a>
-    <a href="#rooms" class="mobile-link">Rooms <span class="thai-text">ห้องพัก</span></a>
-    <a href="#services" class="mobile-link">Services <span class="thai-text">บริการ</span></a>
-    <a href="#location" class="mobile-link">Location <span class="thai-text">ที่ตั้ง</span></a>
-    <a href="#attractions" class="mobile-link">Attractions <span class="thai-text">สถานที่ท่องเที่ยว</span></a>
-    <a href="#contact" class="mobile-link">Contact <span class="thai-text">ติดต่อ</span></a>
-  </nav>
-  <div class="nav-overlay" id="nav-overlay"></div>
+                <div class="room-card featured" data-room="twin">
+                    <div class="room-image">
+                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&q=80" alt="Standard Twin Room" class="room-img">
+                    </div>
+                    <div class="room-content">
+                        <h3 class="room-name">Standard Twin</h3>
+                        <p class="room-name-th">ห้องเตียงคู่</p>
+                        <p class="room-desc">Spacious room with two comfortable single beds, ideal for friends or colleagues traveling together.</p>
+                        <ul class="room-features">
+                            <li><i class="fas fa-bed"></i> 2 Single Beds</li>
+                            <li><i class="fas fa-wifi"></i> Free WiFi</li>
+                            <li><i class="fas fa-snowflake"></i> Air Conditioning</li>
+                            <li><i class="fas fa-tv"></i> Flat TV</li>
+                        </ul>
+                        <div class="room-footer">
+                            <div class="room-price">
+                                <span class="price-from">From</span>
+                                <span class="price-value">฿1,400</span>
+                                <span class="price-unit">/night</span>
+                            </div>
+                            <a href="tel:029659661" class="btn btn-small">Book Now</a>
+                        </div>
+                    </div>
+                </div>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <div class="hero-badge">Boutique Hotel &middot; Nonthaburi</div>
-      <h1>Your <span class="gold-text">Home</span> in Bangkok</h1>
-      <p class="hero-subtitle">Experience warm Thai hospitality in the heart of the city</p>
-      <p class="hero-thai">สัมผัสความประทับใจในบริการแบบไทย ใจกลางเมือง</p>
-      <div class="hero-buttons">
-        <a href="#rooms" class="btn btn-primary"><i class="fas fa-bed"></i> View Rooms</a>
-        <a href="#contact" class="btn btn-outline"><i class="fas fa-phone"></i> Contact Us</a>
-      </div>
-    </div>
-    <a href="#about" class="hero-scroll" aria-label="Scroll down">
-      <i class="fas fa-chevron-down"></i>
+                <div class="room-card" data-room="family">
+                    <div class="room-image">
+                        <img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=600&q=80" alt="Family Room" class="room-img">
+                    </div>
+                    <div class="room-content">
+                        <h3 class="room-name">Family Room</h3>
+                        <p class="room-name-th">ห้องแฟมิลี่</p>
+                        <p class="room-desc">Generous space for the whole family with ample room to relax and unwind after exploring Bangkok.</p>
+                        <ul class="room-features">
+                            <li><i class="fas fa-users"></i> Up to 4 Guests</li>
+                            <li><i class="fas fa-wifi"></i> Free WiFi</li>
+                            <li><i class="fas fa-snowflake"></i> Air Conditioning</li>
+                            <li><i class="fas fa-tv"></i> Flat TV</li>
+                        </ul>
+                        <div class="room-footer">
+                            <div class="room-price">
+                                <span class="price-from">From</span>
+                                <span class="price-value">฿2,000</span>
+                                <span class="price-unit">/night</span>
+                            </div>
+                            <a href="tel:029659661" class="btn btn-small">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-label">Amenities</span>
+                <h2 class="section-title">Hotel Services</h2>
+                <p class="section-desc">Everything you need for a comfortable and convenient stay</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>Free WiFi</h3>
+                    <p>High-speed internet access throughout the entire hotel</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Fitness Center</h3>
+                    <p>Stay active during your stay with our fitness facilities</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <h3>Breakfast</h3>
+                    <p>Complimentary breakfast served daily from 7:00 - 10:00 AM</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>24h CCTV</h3>
+                    <p>Round-the-clock security monitoring for your peace of mind</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shuttle-van"></i>
+                    </div>
+                    <h3>Shuttle Service</h3>
+                    <p>Convenient shuttle service around the Ministry of Public Health area</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>Laundry</h3>
+                    <p>Professional laundry and dry cleaning services available</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-parking"></i>
+                    </div>
+                    <h3>Parking</h3>
+                    <p>Secure on-site parking for hotel guests</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>Mini Mart</h3>
+                    <p>Convenient mini mart for your daily essentials</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location" id="location">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Find Us</span>
+                <h2 class="section-title">Location</h2>
+                <p class="section-desc">Perfectly situated for both business and leisure travelers</p>
+            </div>
+            <div class="location-grid">
+                <div class="location-info">
+                    <div class="location-card">
+                        <div class="loc-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="loc-content">
+                            <h4>Address</h4>
+                            <p>86/3 Moo.9 Ngamwongwan Rd<br>Bangkhen, Muang, Nonthaburi 11000</p>
+                        </div>
+                    </div>
+                    <div class="location-card">
+                        <div class="loc-icon"><i class="fas fa-plane"></i></div>
+                        <div class="loc-content">
+                            <h4>From Airport</h4>
+                            <p>Only 20 minutes from<br>Don Mueang International Airport</p>
+                        </div>
+                    </div>
+                    <div class="location-card">
+                        <div class="loc-icon"><i class="fas fa-train"></i></div>
+                        <div class="loc-content">
+                            <h4>Public Transport</h4>
+                            <p>10 minutes walk to MRT Purple Line<br>&amp; Pink Line stations</p>
+                        </div>
+                    </div>
+                    <div class="location-card">
+                        <div class="loc-icon"><i class="fas fa-road"></i></div>
+                        <div class="loc-content">
+                            <h4>Expressway Access</h4>
+                            <p>Near expressway entrance for easy<br>access to Bangkok city center</p>
+                        </div>
+                    </div>
+                    <div class="nearby-tags">
+                        <span class="tag"><i class="fas fa-shopping-bag"></i> The Mall Ngamwongwan</span>
+                        <span class="tag"><i class="fas fa-building"></i> IMPACT Arena</span>
+                        <span class="tag"><i class="fas fa-hospital"></i> Ministry of Public Health</span>
+                        <span class="tag"><i class="fas fa-film"></i> Esplanade Cinema</span>
+                        <span class="tag"><i class="fas fa-shopping-cart"></i> Central Chaengwattana</span>
+                    </div>
+                </div>
+                <div class="location-map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.1234567890123!2d100.532804!3d13.854277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDUxJzE1LjQiTiAxMDDCsDMxJzU4LjEiRQ!5e0!3m2!1sen!2sth!4v1234567890"
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; border-radius: 16px; min-height: 400px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Attractions Section -->
+    <section class="attractions" id="attractions">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Explore</span>
+                <h2 class="section-title">Nearby Attractions</h2>
+                <p class="section-desc">Discover the best of Nonthaburi and Bangkok</p>
+            </div>
+            <div class="attractions-grid">
+                <div class="attraction-card">
+                    <div class="attr-image">
+                        <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=500&q=80" alt="Koh Kred island" class="attr-img">
+                    </div>
+                    <div class="attr-content">
+                        <h4>Koh Kred <span class="attr-th">เกาะเกร็ด</span></h4>
+                        <p>Famous island known for traditional Thai desserts, pottery, and the Mon community culture.</p>
+                        <a href="http://hilight.kapook.com/view/34788" target="_blank" class="attr-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="attraction-card">
+                    <div class="attr-image">
+                        <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=500&q=80" alt="Chinese temple" class="attr-img">
+                    </div>
+                    <div class="attr-content">
+                        <h4>Wat Leng Noei Yi 2 <span class="attr-th">วัดเล่งเน่ยยี่ 2</span></h4>
+                        <p>Beautiful Chinese temple with intricate architecture and peaceful atmosphere for meditation.</p>
+                        <a href="http://www.thai-tour.com/thai-tour/central/nonthaburi/data/place/watlengneyee.htm" target="_blank" class="attr-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="attraction-card">
+                    <div class="attr-image">
+                        <img src="https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?w=500&q=80" alt="Riverside market" class="attr-img">
+                    </div>
+                    <div class="attr-content">
+                        <h4>Tha Nam Non <span class="attr-th">ท่าน้ำนนท์</span></h4>
+                        <p>Riverside market and pier offering fresh seafood, local delicacies, and scenic river views.</p>
+                        <a href="http://www.manager.co.th/travel/viewnews.aspx?NewsID=9560000111450" target="_blank" class="attr-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="attraction-card">
+                    <div class="attr-image">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=500&q=80" alt="Convention center" class="attr-img">
+                    </div>
+                    <div class="attr-content">
+                        <h4>IMPACT Arena</h4>
+                        <p>One of Asia's largest exhibition and convention centers, hosting world-class events and concerts.</p>
+                        <a href="http://www.impact.co.th/index.php" target="_blank" class="attr-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-label">Get in Touch</span>
+                    <h2 class="section-title">Contact Us</h2>
+                    <p class="contact-desc">Ready to book your stay? Reach out to us directly — we're here to help!</p>
+                    
+                    <div class="contact-methods">
+                        <a href="tel:029659661" class="contact-method">
+                            <div class="cm-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="cm-content">
+                                <span class="cm-label">Phone</span>
+                                <span class="cm-value">02-965-9661-2</span>
+                            </div>
+                        </a>
+                        <a href="tel:0922614394" class="contact-method">
+                            <div class="cm-icon"><i class="fas fa-mobile-alt"></i></div>
+                            <div class="cm-content">
+                                <span class="cm-label">Mobile</span>
+                                <span class="cm-value">092-261-4394</span>
+                            </div>
+                        </a>
+                        <div class="contact-method">
+                            <div class="cm-icon"><i class="fas fa-fax"></i></div>
+                            <div class="cm-content">
+                                <span class="cm-label">Fax</span>
+                                <span class="cm-value">02-965-9800</span>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="cm-icon" style="background: #06C755;"><i class="fab fa-line"></i></div>
+                            <div class="cm-content">
+                                <span class="cm-label">LINE</span>
+                                <span class="cm-value" id="lineId">bangkoktravelsuites</span>
+                            </div>
+                            <button class="copy-btn" onclick="copyLineId()" title="Copy LINE ID">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                        <div class="contact-method">
+                            <div class="cm-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="cm-content">
+                                <span class="cm-label">Address</span>
+                                <span class="cm-value">86/3 Moo.9 Ngamwongwan Rd, Bangkhen, Muang, Nonthaburi 11000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you for your message! Please call us at 02-965-9661 to complete your booking.');">
+                        <h3>Send Us a Message</h3>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="+66 8x xxx xxxx">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="4" placeholder="Tell us about your stay..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-hotel"></i>
+                        <span>Bangkok Travel Suites</span>
+                    </div>
+                    <p>Your home in Bangkok. Experience warm Thai hospitality with modern comfort.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LINE"><i class="fab fa-line"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#rooms">Rooms</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#location">Location</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Rooms</h4>
+                    <ul>
+                        <li><a href="#rooms">Standard Double</a></li>
+                        <li><a href="#rooms">Standard Twin</a></li>
+                        <li><a href="#rooms">Family Room</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-phone"></i> 02-965-9661-2</p>
+                    <p><i class="fas fa-mobile-alt"></i> 092-261-4394</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Nonthaburi, Thailand</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Bangkok Travel Suites Hotel. All rights reserved.</p>
+                <p class="footer-tagline">Have a nice day! <i class="fas fa-heart"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating CTA -->
+    <a href="tel:029659661" class="floating-cta" aria-label="Call to book">
+        <i class="fas fa-phone"></i>
+        <span>Book Now</span>
     </a>
-  </section>
 
-  <!-- ===== TRUST BAR ===== -->
-  <div class="trust-bar">
-    <div class="container">
-      <div class="trust-items">
-        <div class="trust-item"><i class="fas fa-bed"></i> 40 Rooms</div>
-        <span class="trust-divider">|</span>
-        <div class="trust-item"><i class="fas fa-wifi"></i> Free WiFi</div>
-        <span class="trust-divider">|</span>
-        <div class="trust-item"><i class="fas fa-utensils"></i> Breakfast Included</div>
-        <span class="trust-divider">|</span>
-        <div class="trust-item"><i class="fas fa-plane"></i> 20 min to Airport</div>
-      </div>
-    </div>
-  </div>
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-  <!-- ===== ABOUT ===== -->
-  <section class="section" id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-visual" role="img" aria-label="Hotel ambiance">
-          <div class="about-visual-bg"></div>
-          <div class="about-visual-pattern">
-            <i class="fas fa-hotel"></i>
-          </div>
-          <div class="about-visual-accent"></div>
-        </div>
-        <div class="about-content">
-          <h2>About Our Hotel <span class="thai-text">เกี่ยวกับโรงแรมของเรา</span></h2>
-          <p>Welcome to Bangkok Travel Suites Hotel, a boutique retreat nestled on Ngamwongwan Road in Nonthaburi. Whether you're visiting for business or leisure, our 40 thoughtfully designed rooms offer the perfect blend of comfort, convenience, and Thai hospitality.</p>
-          <p>Located just 20 minutes from Don Mueang International Airport and near the expressway, we provide easy access to both Bangkok's vibrant city center and key destinations like IMPACT Muang Thong Thani.</p>
-          <p class="thai-text">ยินดีต้อนรับสู่โรงแรมบางกอก แทรเวล สวีทส์ ที่พักบูทีคบนถนนงามวงศ์วาน จังหวัดนนทบุรี พร้อมให้บริการด้วยห้องพักจำนวน 40 ห้อง ใกล้ทางด่วนและสนามบินดอนเมือง</p>
-          <div class="about-features">
-            <div class="about-feature">
-              <i class="fas fa-check-circle"></i>
-              <span>Prime Location</span>
-            </div>
-            <div class="about-feature">
-              <i class="fas fa-check-circle"></i>
-              <span>Modern Rooms</span>
-            </div>
-            <div class="about-feature">
-              <i class="fas fa-check-circle"></i>
-              <span>Free Breakfast</span>
-            </div>
-            <div class="about-feature">
-              <i class="fas fa-check-circle"></i>
-              <span>24h Security</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== ROOMS ===== -->
-  <section class="section section-alt" id="rooms">
-    <div class="container">
-      <h2 class="section-title">Our Rooms <span class="thai-text">ห้องพักของเรา</span></h2>
-      <p class="section-subtitle">Comfortable accommodations for every traveler</p>
-
-      <div class="rooms-grid">
-        <!-- Standard Double -->
-        <article class="room-card">
-          <div class="room-visual gold">
-            <i class="fas fa-bed"></i>
-            <span class="room-badge">Popular</span>
-          </div>
-          <div class="room-info">
-            <h3>Standard Double <span class="thai-text">ห้องเตียงเดี่ยว</span></h3>
-            <p class="room-desc">A comfortable single bed room perfect for solo travelers or couples seeking a cozy retreat after a day of exploring Bangkok.</p>
-            <div class="room-meta">
-              <span><i class="fas fa-user"></i> 2 Guests</span>
-              <span><i class="fas fa-bed"></i> 1 Bed</span>
-              <span><i class="fas fa-wifi"></i> WiFi</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Standard Twin -->
-        <article class="room-card">
-          <div class="room-visual teal">
-            <i class="fas fa-people-arrows"></i>
-          </div>
-          <div class="room-info">
-            <h3>Standard Twin <span class="thai-text">ห้องเตียงคู่</span></h3>
-            <p class="room-desc">Two single beds ideal for friends traveling together or colleagues on a business trip, with ample space to unwind.</p>
-            <div class="room-meta">
-              <span><i class="fas fa-user"></i> 2 Guests</span>
-              <span><i class="fas fa-bed"></i> 2 Beds</span>
-              <span><i class="fas fa-wifi"></i> WiFi</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Family Room -->
-        <article class="room-card">
-          <div class="room-visual rose">
-            <i class="fas fa-users"></i>
-            <span class="room-badge">Spacious</span>
-          </div>
-          <div class="room-info">
-            <h3>Family Room <span class="thai-text">ห้องแฟมิลี่</span></h3>
-            <p class="room-desc">A spacious room designed for families, offering plenty of space for everyone to relax and enjoy their Bangkok vacation.</p>
-            <div class="room-meta">
-              <span><i class="fas fa-user"></i> 4 Guests</span>
-              <span><i class="fas fa-bed"></i> Multiple</span>
-              <span><i class="fas fa-wifi"></i> WiFi</span>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SERVICES ===== -->
-  <section class="section" id="services">
-    <div class="container">
-      <h2 class="section-title">Hotel Services <span class="thai-text">บริการของโรงแรม</span></h2>
-      <p class="section-subtitle">Everything you need for a comfortable stay</p>
-
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-dumbbell"></i></div>
-          <h4>Fitness Center <span class="thai-text">ฟิตเนส</span></h4>
-        </div>
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-wifi"></i></div>
-          <h4>Free WiFi <span class="thai-text">WiFi ฟรี</span></h4>
-        </div>
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-coffee"></i></div>
-          <h4>Breakfast <span class="thai-text">อาหารเช้า 7-10 น.</span></h4>
-        </div>
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-video"></i></div>
-          <h4>24h CCTV <span class="thai-text">กล้องวงจรปิด</span></h4>
-        </div>
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-shuttle-van"></i></div>
-          <h4>Shuttle <span class="thai-text">รถรับส่ง</span></h4>
-        </div>
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-tshirt"></i></div>
-          <h4>Laundry <span class="thai-text">ซักรีด</span></h4>
-        </div>
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-car"></i></div>
-          <h4>Parking <span class="thai-text">ที่จอดรถ</span></h4>
-        </div>
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-store"></i></div>
-          <h4>Minimart <span class="thai-text">มินิมาร์ท</span></h4>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== LOCATION ===== -->
-  <section class="section section-alt" id="location">
-    <div class="container">
-      <h2 class="section-title">Our Location <span class="thai-text">ที่ตั้งของเรา</span></h2>
-      <p class="section-subtitle">Conveniently located near shopping, transit, and business hubs</p>
-
-      <div class="location-grid">
-        <div class="map-container">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.0!2d100.5!3d13.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDQ4JzAwLjAiTiAxMDDCsDMwJzAwLjAiRQ!5e0!3m2!1sen!2sth!4v1600000000000!5m2!1sen!2sth"
-            title="Bangkok Travel Suites Hotel Location Map"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            allowfullscreen="">
-          </iframe>
-        </div>
-
-        <div class="location-info">
-          <h3>Address & Contact <span class="thai-text">ที่อยู่และการติดต่อ</span></h3>
-
-          <div class="location-detail">
-            <i class="fas fa-map-marker-alt"></i>
-            <div>
-              <strong>Address <span class="thai-text">ที่อยู่</span></strong>
-              <p>86/3 Moo.9 Ngamwongwan Rd, Bangkhen, Muang, Nonthaburi 11000</p>
-              <p class="thai-text">86/3 หมู่ 9 ถนนงามวงศ์วาน ตำบลบางเขน อำเภอเมือง จังหวัดนนทบุรี 11000</p>
-            </div>
-          </div>
-
-          <div class="location-detail">
-            <i class="fas fa-phone"></i>
-            <div>
-              <strong>Phone <span class="thai-text">โทรศัพท์</span></strong>
-              <p><a href="tel:029659661">02-965-9661-2</a>, <a href="tel:0922614394">092-261-4394</a></p>
-            </div>
-          </div>
-
-          <div class="location-detail">
-            <i class="fas fa-fax"></i>
-            <div>
-              <strong>Fax <span class="thai-text">แฟกซ์</span></strong>
-              <p>02-965-9800</p>
-            </div>
-          </div>
-
-          <div class="location-detail">
-            <i class="fab fa-line"></i>
-            <div>
-              <strong>Line <span class="thai-text">ไลน์</span></strong>
-              <p><a href="https://line.me/ti/p/~bangkoktravelsuites" target="_blank" rel="noopener">@bangkoktravelsuites</a></p>
-            </div>
-          </div>
-
-          <div class="location-nearby">
-            <h4>Nearby <span class="thai-text">สถานที่ใกล้เคียง</span></h4>
-            <div class="nearby-tags">
-              <span class="nearby-tag">The Mall Ngamwongwan</span>
-              <span class="nearby-tag">IMPACT Muang Thong Thani</span>
-              <span class="nearby-tag">Ministry of Public Health</span>
-              <span class="nearby-tag">MRT Purple Line</span>
-              <span class="nearby-tag">MRT Pink Line</span>
-              <span class="nearby-tag">10 min walk to MRT</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== ATTRACTIONS ===== -->
-  <section class="section" id="attractions">
-    <div class="container">
-      <h2 class="section-title">Nearby Attractions <span class="thai-text">สถานที่ท่องเที่ยวใกล้เคียง</span></h2>
-      <p class="section-subtitle">Explore the best of Bangkok and Nonthaburi</p>
-
-      <div class="attractions-grid">
-        <article class="attraction-card">
-          <div class="attraction-visual navy">
-            <i class="fas fa-island-tropical"></i>
-          </div>
-          <div class="attraction-info">
-            <h4>Koh Kred <span class="thai-text">เกาะเกร็ด</span></h4>
-            <p>A charming man-made island on the Chao Phraya River, famous for its Mon community, pottery villages, and riverside markets.</p>
-            <div class="attraction-meta"><i class="fas fa-route"></i> ~15 min drive</div>
-          </div>
-        </article>
-
-        <article class="attraction-card">
-          <div class="attraction-visual gold">
-            <i class="fas fa-vihara"></i>
-          </div>
-          <div class="attraction-info">
-            <h4>Wat Leng Noei Yi 2 <span class="thai-text">วัดเล่งเน่ยยี่ 2</span></h4>
-            <p>A magnificent Chinese Buddhist temple with stunning architecture, intricate decorations, and a peaceful atmosphere for meditation.</p>
-            <div class="attraction-meta"><i class="fas fa-route"></i> ~10 min drive</div>
-          </div>
-        </article>
-
-        <article class="attraction-card">
-          <div class="attraction-visual teal">
-            <i class="fas fa-water"></i>
-          </div>
-          <div class="attraction-info">
-            <h4>Tha Nam Non <span class="thai-text">ท่าน้ำนนท์</span></h4>
-            <p>A scenic riverside area perfect for evening strolls, local dining, and experiencing authentic Thai riverside life and culture.</p>
-            <div class="attraction-meta"><i class="fas fa-route"></i> ~10 min drive</div>
-          </div>
-        </article>
-
-        <article class="attraction-card">
-          <div class="attraction-visual rose">
-            <i class="fas fa-building"></i>
-          </div>
-          <div class="attraction-info">
-            <h4>IMPACT Arena <span class="thai-text">อิมแพ็ค เมืองทองธานี</span></h4>
-            <p>One of Asia's largest exhibition and convention centers, hosting concerts, trade shows, and major events throughout the year.</p>
-            <div class="attraction-meta"><i class="fas fa-route"></i> ~15 min drive</div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CONTACT ===== -->
-  <section class="section section-alt" id="contact">
-    <div class="container">
-      <h2 class="section-title">Contact Us <span class="thai-text">ติดต่อเรา</span></h2>
-      <p class="section-subtitle">We'd love to hear from you</p>
-
-      <div class="contact-grid">
-        <div class="contact-card">
-          <h3>Get in Touch <span class="thai-text">ติดต่อสอบถาม</span></h3>
-
-          <div class="contact-item">
-            <i class="fas fa-phone-alt"></i>
-            <div>
-              <strong>Phone <span class="thai-text">โทรศัพท์</span></strong>
-              <p><a href="tel:029659661">02-965-9661-2</a></p>
-              <p><a href="tel:0922614394">092-261-4394</a></p>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <i class="fas fa-fax"></i>
-            <div>
-              <strong>Fax <span class="thai-text">แฟกซ์</span></strong>
-              <p>02-965-9800</p>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <i class="fab fa-line"></i>
-            <div>
-              <strong>Line</strong>
-              <p><a href="https://line.me/ti/p/~bangkoktravelsuites" target="_blank" rel="noopener">bangkoktravelsuites</a></p>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <div>
-              <strong>Address <span class="thai-text">ที่อยู่</span></strong>
-              <p>86/3 Moo.9 Ngamwongwan Rd, Bangkhen, Muang, Nonthaburi 11000</p>
-            </div>
-          </div>
-
-          <div class="contact-social">
-            <a href="https://line.me/ti/p/~bangkoktravelsuites" target="_blank" rel="noopener" aria-label="Line"><i class="fab fa-line"></i></a>
-            <a href="tel:029659661" aria-label="Phone"><i class="fas fa-phone"></i></a>
-            <a href="#location" aria-label="Map"><i class="fas fa-map-marker-alt"></i></a>
-          </div>
-        </div>
-
-        <div class="contact-card">
-          <h3>Quick Info <span class="thai-text">ข้อมูลทั่วไป</span></h3>
-
-          <div class="contact-item">
-            <i class="fas fa-clock"></i>
-            <div>
-              <strong>Check-in / Check-out <span class="thai-text">เช็คอิน / เช็คเอาท์</span></strong>
-              <p>Check-in: 2:00 PM</p>
-              <p>Check-out: 12:00 PM</p>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <i class="fas fa-coffee"></i>
-            <div>
-              <strong>Breakfast <span class="thai-text">อาหารเช้า</span></strong>
-              <p>Served daily from 7:00 AM - 10:00 AM</p>
-              <p class="thai-text">ให้บริการทุกวัน เวลา 07:00 - 10:00 น.</p>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <i class="fas fa-shuttle-van"></i>
-            <div>
-              <strong>Airport Distance <span class="thai-text">ระยะทางจากสนามบิน</span></strong>
-              <p>20 minutes from Don Mueang Airport</p>
-              <p class="thai-text">20 นาทีจากสนามบินดอนเมือง</p>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <i class="fas fa-subway"></i>
-            <div>
-              <strong>Public Transit <span class="thai-text">การคมนาคม</span></strong>
-              <p>10 min walk to MRT Purple / Pink Lines</p>
-              <p class="thai-text">เดิน 10 นาทีถึงรถไฟฟ้า MRT สายสีม่วง/ชมพู</p>
-            </div>
-          </div>
-
-          <div class="contact-hours">
-            <h4>Front Desk <span class="thai-text">แผนกต้อนรับ</span></h4>
-            <p>Open 24 hours &middot; ให้บริการตลอด 24 ชั่วโมง</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="#" class="logo">BTS Hotel<span>Bangkok Travel Suites</span></a>
-          <p>Your home away from home in Bangkok. Experience authentic Thai hospitality with modern comfort on Ngamwongwan Road, Nonthaburi.</p>
-          <p class="thai-text" style="margin-top:0.5rem;">บ้านของคุณในกรุงเทพฯ สัมผัสการต้อนรับแบบไทยพร้อมความสะดวกสบายสมัยใหม่</p>
-        </div>
-
-        <div class="footer-links">
-          <h4>Explore <span class="thai-text">สำรวจ</span></h4>
-          <a href="#about">About</a>
-          <a href="#rooms">Rooms</a>
-          <a href="#services">Services</a>
-          <a href="#location">Location</a>
-        </div>
-
-        <div class="footer-links">
-          <h4>Discover <span class="thai-text">ค้นพบ</span></h4>
-          <a href="#attractions">Attractions</a>
-          <a href="#contact">Contact</a>
-          <a href="https://line.me/ti/p/~bangkoktravelsuites" target="_blank" rel="noopener">Line Official</a>
-        </div>
-
-        <div class="footer-links">
-          <h4>Contact <span class="thai-text">ติดต่อ</span></h4>
-          <a href="tel:029659661">02-965-9661-2</a>
-          <a href="tel:0922614394">092-261-4394</a>
-          <a href="#location">View on Map</a>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2024 Bangkok Travel Suites Hotel. All rights reserved. &middot; โรงแรมบางกอก แทรเวล สวีทส์</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ===== BACK TO TOP ===== -->
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
-
-  <!-- ===== FLOATING CTA ===== -->
-  <div class="floating-cta">
-    <a href="tel:029659661" aria-label="Book Now">
-      <i class="fas fa-calendar-check"></i> Book Now
-    </a>
-  </div>
-
-  <!-- ===== JAVASCRIPT ===== -->
-  <script>
-    (function() {
-      'use strict';
-
-      // Elements
-      const header = document.getElementById('header');
-      const hamburger = document.getElementById('hamburger');
-      const mobileNav = document.getElementById('mobile-nav');
-      const navOverlay = document.getElementById('nav-overlay');
-      const mobileLinks = document.querySelectorAll('.mobile-link');
-      const backToTop = document.getElementById('backToTop');
-
-      // Toggle mobile menu
-      function toggleMenu() {
-        const isOpen = mobileNav.classList.contains('open');
-        mobileNav.classList.toggle('open');
-        navOverlay.classList.toggle('active');
-        hamburger.classList.toggle('active');
-        hamburger.setAttribute('aria-expanded', !isOpen);
-        document.body.style.overflow = isOpen ? '' : 'hidden';
-      }
-
-      hamburger.addEventListener('click', toggleMenu);
-      navOverlay.addEventListener('click', toggleMenu);
-
-      mobileLinks.forEach(function(link) {
-        link.addEventListener('click', toggleMenu);
-      });
-
-      // Header scroll effect
-      function onScroll() {
-        if (window.scrollY > 50) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
-        }
-
-        // Back to top visibility
-        if (window.scrollY > 500) {
-          backToTop.classList.add('visible');
-        } else {
-          backToTop.classList.remove('visible');
-        }
-      }
-
-      window.addEventListener('scroll', onScroll);
-
-      // Back to top
-      backToTop.addEventListener('click', function() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-
-      // Smooth scroll for anchor links (polyfill for older browsers)
-      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-        anchor.addEventListener('click', function(e) {
-          const href = this.getAttribute('href');
-          if (href === '#') return;
-          const target = document.querySelector(href);
-          if (target) {
-            e.preventDefault();
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-        });
-      });
-
-      // Close menu on Escape key
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && mobileNav.classList.contains('open')) {
-          toggleMenu();
-        }
-      });
-    })();
-  </script>
-
+    <script src="js/main.js"></script>
 </body>
 </html>
