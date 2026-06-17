@@ -1,10 +1,13 @@
 /**
  * Bangkok Travel Suites Hotel - Main JavaScript
- * Handles mobile menu, smooth scroll, navbar effects, and interactions
+ * GSAP animations, scroll effects, and interactions
  */
 
 (function() {
     'use strict';
+
+    // Register GSAP ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
 
     // DOM Elements
     const navbar = document.getElementById('navbar');
@@ -14,19 +17,17 @@
     const backToTop = document.getElementById('backToTop');
 
     // ========================================
-    // Navbar scroll effect
+    // NAVBAR SCROLL EFFECT
     // ========================================
     function handleScroll() {
         const scrollY = window.scrollY;
         
-        // Add/remove scrolled class
         if (scrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
         
-        // Show/hide back to top button
         if (scrollY > 500) {
             backToTop.classList.add('visible');
         } else {
@@ -37,7 +38,7 @@
     window.addEventListener('scroll', handleScroll, { passive: true });
 
     // ========================================
-    // Mobile menu toggle
+    // MOBILE MENU
     // ========================================
     function toggleMenu() {
         navToggle.classList.toggle('active');
@@ -47,7 +48,6 @@
 
     navToggle.addEventListener('click', toggleMenu);
 
-    // Close menu when clicking a link
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             if (navMenu.classList.contains('active')) {
@@ -56,7 +56,6 @@
         });
     });
 
-    // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (navMenu.classList.contains('active') && 
             !navMenu.contains(e.target) && 
@@ -66,7 +65,7 @@
     });
 
     // ========================================
-    // Back to top
+    // BACK TO TOP
     // ========================================
     backToTop.addEventListener('click', () => {
         window.scrollTo({
@@ -76,7 +75,7 @@
     });
 
     // ========================================
-    // Active nav link on scroll
+    // ACTIVE NAV LINK ON SCROLL
     // ========================================
     const sections = document.querySelectorAll('section[id]');
 
@@ -102,7 +101,319 @@
     window.addEventListener('scroll', highlightNav, { passive: true });
 
     // ========================================
-    // Copy LINE ID
+    // HERO ENTRANCE ANIMATIONS
+    // ========================================
+    const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+    
+    heroTl
+        .from('.hero-badge', { opacity: 0, y: 30, duration: 0.8 }, 0.2)
+        .from('.hero-title', { opacity: 0, y: 50, duration: 1 }, 0.4)
+        .from('.hero-subtitle', { opacity: 0, y: 40, duration: 0.8 }, 0.6)
+        .from('.hero-cta', { opacity: 0, y: 30, duration: 0.8 }, 0.8)
+        .from('.hero-trust', { opacity: 0, y: 30, duration: 0.8 }, 1.0)
+        .from('.scroll-indicator', { opacity: 0, duration: 1 }, 1.2);
+
+    // Hero parallax effect on scroll
+    gsap.to('.hero-img', {
+        yPercent: 30,
+        ease: 'none',
+        scrollTrigger: {
+            trigger: '.hero',
+            start: 'top top',
+            end: 'bottom top',
+            scrub: true
+        }
+    });
+
+    gsap.to('.hero-content', {
+        yPercent: -20,
+        opacity: 0,
+        ease: 'none',
+        scrollTrigger: {
+            trigger: '.hero',
+            start: 'top top',
+            end: '50% top',
+            scrub: true
+        }
+    });
+
+    // ========================================
+    // ABOUT SECTION ANIMATIONS
+    // ========================================
+    gsap.from('.about-content', {
+        opacity: 0,
+        x: -60,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: '.about',
+            start: 'top 80%',
+            toggleActions: 'play none none reverse'
+        }
+    });
+
+    gsap.from('.about-visual', {
+        opacity: 0,
+        x: 60,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: '.about',
+            start: 'top 80%',
+            toggleActions: 'play none none reverse'
+        }
+    });
+
+    gsap.from('.about-stats .stat-item', {
+        opacity: 0,
+        y: 30,
+        duration: 0.6,
+        stagger: 0.15,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: '.about-stats',
+            start: 'top 90%',
+            toggleActions: 'play none none reverse'
+        }
+    });
+
+    // ========================================
+    // SECTION HEADER ANIMATIONS (reusable)
+    // ========================================
+    const sectionHeaders = document.querySelectorAll('.section-header');
+    
+    sectionHeaders.forEach(header => {
+        gsap.from(header.children, {
+            opacity: 0,
+            y: 40,
+            duration: 0.8,
+            stagger: 0.15,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: header,
+                start: 'top 85%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+    });
+
+    // ========================================
+    // ROOM CARDS STAGGER ANIMATION
+    // ========================================
+    gsap.from('.room-card', {
+        opacity: 0,
+        y: 80,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: '.rooms-grid',
+            start: 'top 80%',
+            toggleActions: 'play none none reverse'
+        }
+    });
+
+    // Room card hover image zoom
+    document.querySelectorAll('.room-card').forEach(card => {
+        const img = card.querySelector('.room-img');
+        if (img) {
+            card.addEventListener('mouseenter', () => {
+                gsap.to(img, { scale: 1.1, duration: 0.5, ease: 'power2.out' });
+            });
+            card.addEventListener('mouseleave', () => {
+                gsap.to(img, { scale: 1, duration: 0.5, ease: 'power2.out' });
+            });
+        }
+    });
+
+    // ========================================
+    // SERVICES STAGGER ANIMATION
+    // ========================================
+    gsap.from('.service-card', {
+        opacity: 0,
+        y: 60,
+        scale: 0.9,
+        duration: 0.6,
+        stagger: 0.1,
+        ease: 'back.out(1.7)',
+        scrollTrigger: {
+            trigger: '.services-grid',
+            start: 'top 80%',
+            toggleActions: 'play none none reverse'
+        }
+    });
+
+    // Service icon pulse animation
+    gsap.from('.service-icon', {
+        scale: 0,
+        duration: 0.5,
+        stagger: 0.1,
+        ease: 'elastic.out(1, 0.5)',
+        scrollTrigger: {
+            trigger: '.services-grid',
+            start: 'top 75%',
+            toggleActions: 'play none none reverse'
+        }
+    });
+
+    // ========================================
+    // LOCATION CARDS ANIMATION
+    // ========================================
+    gsap.from('.location-card', {
+        opacity: 0,
+        x: -40,
+        duration: 0.6,
+        stagger: 0.15,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: '.location-info',
+            start: 'top 80%',
+            toggleActions: 'play none none reverse'
+        }
+    });
+
+    gsap.from('.nearby-tags .tag', {
+        opacity: 0,
+        scale: 0.8,
+        duration: 0.4,
+        stagger: 0.08,
+        ease: 'back.out(1.7)',
+        scrollTrigger: {
+            trigger: '.nearby-tags',
+            start: 'top 90%',
+            toggleActions: 'play none none reverse'
+        }
+    });
+
+    gsap.from('.location-map', {
+        opacity: 0,
+        x: 60,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: '.location-grid',
+            start: 'top 80%',
+            toggleActions: 'play none none reverse'
+        }
+    });
+
+    // ========================================
+    // ATTRACTIONS ANIMATION
+    // ========================================
+    gsap.from('.attraction-card', {
+        opacity: 0,
+        y: 80,
+        rotateY: 10,
+        duration: 0.8,
+        stagger: 0.15,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: '.attractions-grid',
+            start: 'top 80%',
+            toggleActions: 'play none none reverse'
+        }
+    });
+
+    // ========================================
+    // CONTACT SECTION ANIMATION
+    // ========================================
+    gsap.from('.contact-info', {
+        opacity: 0,
+        x: -60,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: '.contact-grid',
+            start: 'top 80%',
+            toggleActions: 'play none none reverse'
+        }
+    });
+
+    gsap.from('.contact-method', {
+        opacity: 0,
+        x: -30,
+        duration: 0.6,
+        stagger: 0.12,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: '.contact-methods',
+            start: 'top 85%',
+            toggleActions: 'play none none reverse'
+        }
+    });
+
+    gsap.from('.contact-form-wrapper', {
+        opacity: 0,
+        x: 60,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: '.contact-grid',
+            start: 'top 80%',
+            toggleActions: 'play none none reverse'
+        }
+    });
+
+    // ========================================
+    // FOOTER ANIMATION
+    // ========================================
+    gsap.from('.footer-grid > div', {
+        opacity: 0,
+        y: 40,
+        duration: 0.6,
+        stagger: 0.15,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: '.footer',
+            start: 'top 90%',
+            toggleActions: 'play none none reverse'
+        }
+    });
+
+    // ========================================
+    // FLOATING CTA ANIMATION
+    // ========================================
+    gsap.from('.floating-cta', {
+        opacity: 0,
+        x: 50,
+        duration: 0.8,
+        delay: 2,
+        ease: 'back.out(1.7)'
+    });
+
+    // Floating CTA pulse
+    gsap.to('.floating-cta', {
+        scale: 1.05,
+        duration: 1.5,
+        repeat: -1,
+        yoyo: true,
+        ease: 'power1.inOut'
+    });
+
+    // ========================================
+    // SMOOTH SCROLL FOR ANCHOR LINKS
+    // ========================================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href === '#') return;
+            
+            const target = document.querySelector(href);
+            if (target) {
+                e.preventDefault();
+                const offset = 80;
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // ========================================
+    // COPY LINE ID
     // ========================================
     window.copyLineId = function() {
         const lineId = document.getElementById('lineId').textContent;
@@ -110,7 +421,6 @@
         navigator.clipboard.writeText(lineId).then(() => {
             showToast('LINE ID copied: ' + lineId);
         }).catch(err => {
-            // Fallback for older browsers
             const textarea = document.createElement('textarea');
             textarea.value = lineId;
             textarea.style.position = 'fixed';
@@ -130,10 +440,9 @@
     };
 
     // ========================================
-    // Toast notification
+    // TOAST NOTIFICATION
     // ========================================
     function showToast(message) {
-        // Remove existing toast
         const existingToast = document.querySelector('.toast-notification');
         if (existingToast) {
             existingToast.remove();
@@ -167,13 +476,11 @@
         
         document.body.appendChild(toast);
         
-        // Trigger animation
         requestAnimationFrame(() => {
             toast.style.opacity = '1';
             toast.style.transform = 'translateX(-50%) translateY(0)';
         });
 
-        // Remove after 3 seconds
         setTimeout(() => {
             toast.style.opacity = '0';
             toast.style.transform = 'translateX(-50%) translateY(20px)';
@@ -182,57 +489,44 @@
     }
 
     // ========================================
-    // Intersection Observer for animations
+    // MAGNETIC CURSOR EFFECT (desktop only)
     // ========================================
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-
-    // Observe elements for scroll animations
-    document.querySelectorAll('.room-card, .service-card, .attraction-card, .location-card').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-    });
-
-    // ========================================
-    // Smooth scroll for anchor links (fallback)
-    // ========================================
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (href === '#') return;
-            
-            const target = document.querySelector(href);
-            if (target) {
-                e.preventDefault();
-                const offset = 80; // Account for fixed navbar
-                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+    if (window.matchMedia('(pointer: fine)').matches) {
+        document.querySelectorAll('.btn, .room-card, .service-card, .attraction-card').forEach(el => {
+            el.addEventListener('mousemove', (e) => {
+                const rect = el.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
                 
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
+                gsap.to(el, {
+                    x: x * 0.1,
+                    y: y * 0.1,
+                    duration: 0.3,
+                    ease: 'power2.out'
                 });
-            }
+            });
+            
+            el.addEventListener('mouseleave', () => {
+                gsap.to(el, {
+                    x: 0,
+                    y: 0,
+                    duration: 0.5,
+                    ease: 'elastic.out(1, 0.5)'
+                });
+            });
         });
-    });
+    }
 
     // ========================================
-    // Initialize
+    // INITIALIZE
     // ========================================
     handleScroll();
     highlightNav();
 
-    console.log('🏨 Bangkok Travel Suites Hotel - Website loaded successfully!');
+    // Refresh ScrollTrigger on window resize
+    window.addEventListener('resize', () => {
+        ScrollTrigger.refresh();
+    });
+
+    console.log('🏨 Bangkok Travel Suites Hotel - Website loaded with GSAP animations!');
 })();
